@@ -9,7 +9,7 @@ const NavItem = ({href, children, schema}) => {
     const pickedSchema = schemes[schema]
     return (
         <li>
-            <a href={href} className={classNames('text-md  ',pickedSchema)}>{children}</a>
+            <a href={href} className={classNames('2xl:text-xl xl:text-lg md:text-sm  ',pickedSchema)}>{children}</a>
         </li>
     )
 }

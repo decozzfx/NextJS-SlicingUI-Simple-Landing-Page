@@ -1,10 +1,15 @@
+import classNames from 'classnames'
 import React from 'react'
 import NavItem from './NavItem'
 
-const Nav = () => {
-    
+const Nav = ({dir}) => {
+    const dirs = {
+        vertical : 'flex-col text-center space-y-10 mt-16',
+        horizontal : 'justify-center space-x-10'
+    }
+    const pickedDir = dirs[dir]
     return (
-        <ul className='flex justify-center space-x-10'>
+        <ul className={classNames("flex",pickedDir)}>
             <NavItem schema='selected'>Menu</NavItem>
             <NavItem schema='light'>Features</NavItem>
             <NavItem schema='light'>About</NavItem>
